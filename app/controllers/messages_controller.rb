@@ -13,8 +13,6 @@ class MessagesController < ApplicationController
 
   def create
     Message.create(message_params)
-    # message = Message.create!(message_params)
-    # redirect_to message
   end
 
   def edit
@@ -34,6 +32,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:name, :age)
+    params.require(:message).permit(:title, :content)
   end
 end
